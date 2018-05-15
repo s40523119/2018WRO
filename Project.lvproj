@@ -28,7 +28,6 @@
 		<Property Name="target.FPProtocolGlobals_ControlTimeLimit" Type="Int">300</Property>
 		<Property Name="target.getDefault-&gt;WebServer.Port" Type="Int">80</Property>
 		<Property Name="target.getDefault-&gt;WebServer.Timeout" Type="Int">60</Property>
-		<Property Name="target.IOScan.Enabled" Type="Bool">true</Property>
 		<Property Name="target.IOScan.Faults" Type="Str"></Property>
 		<Property Name="target.IOScan.NetVarPeriod" Type="UInt">100</Property>
 		<Property Name="target.IOScan.NetWatchdogEnabled" Type="Bool">false</Property>
@@ -1311,6 +1310,7 @@ AddOutputFilter chunkFilter
 				<Item Name="KNR3 Reference.ctl" Type="VI" URL="/&lt;userlib&gt;/KNR OS 3.0 LabVIEW Toolkit/Type Definition/KNR3 Reference.ctl"/>
 				<Item Name="Lego Port.ctl" Type="VI" URL="/&lt;userlib&gt;/KNR OS 3.0 LabVIEW Toolkit/support SubVI/_Controls/Lego Port.ctl"/>
 				<Item Name="Lego Port_Digital.ctl" Type="VI" URL="/&lt;userlib&gt;/KNR OS 3.0 LabVIEW Toolkit/support SubVI/_Controls/Lego Port_Digital.ctl"/>
+				<Item Name="LEGO Sensor.vi" Type="VI" URL="/&lt;userlib&gt;/KNR OS 3.0 LabVIEW Toolkit/LEGO-specific Sensors/LEGO Sensor.vi"/>
 				<Item Name="Modify Lego Port.vi" Type="VI" URL="/&lt;userlib&gt;/KNR OS 3.0 LabVIEW Toolkit/support SubVI/Modify Lego Port.vi"/>
 				<Item Name="Motor Name to Address.vi" Type="VI" URL="/&lt;userlib&gt;/KNR OS 3.0 LabVIEW Toolkit/support SubVI/_Utilities/Motor Name to Address.vi"/>
 				<Item Name="Onboard Button.vi" Type="VI" URL="/&lt;userlib&gt;/KNR OS 3.0 LabVIEW Toolkit/OnBoard/Onboard Button.vi"/>
@@ -1320,9 +1320,19 @@ AddOutputFilter chunkFilter
 				<Item Name="RC Servo Motor Set RC Positions.vi" Type="VI" URL="/&lt;userlib&gt;/KNR OS 3.0 LabVIEW Toolkit/RC Servo Motor/RC Servo Motor Set RC Positions.vi"/>
 				<Item Name="RC Servo Port.ctl" Type="VI" URL="/&lt;userlib&gt;/KNR OS 3.0 LabVIEW Toolkit/Type Definition/RC Servo Port.ctl"/>
 				<Item Name="Read Battery Voltage.vi" Type="VI" URL="/&lt;userlib&gt;/KNR OS 3.0 LabVIEW Toolkit/General/Read Battery Voltage.vi"/>
+				<Item Name="Read Lego Light Sensor(LED Off).vi" Type="VI" URL="/&lt;userlib&gt;/KNR OS 3.0 LabVIEW Toolkit/LEGO-specific Sensors/Complete Analog Sensors/Read Lego Light Sensor(LED Off).vi"/>
+				<Item Name="Read Lego Light Sensor(LED On).vi" Type="VI" URL="/&lt;userlib&gt;/KNR OS 3.0 LabVIEW Toolkit/LEGO-specific Sensors/Complete Analog Sensors/Read Lego Light Sensor(LED On).vi"/>
+				<Item Name="Read Lego Touch Sensor(Bumped).vi" Type="VI" URL="/&lt;userlib&gt;/KNR OS 3.0 LabVIEW Toolkit/LEGO-specific Sensors/Complete Analog Sensors/Read Lego Touch Sensor(Bumped).vi"/>
+				<Item Name="Read Lego Touch Sensor(Count).vi" Type="VI" URL="/&lt;userlib&gt;/KNR OS 3.0 LabVIEW Toolkit/LEGO-specific Sensors/Complete Analog Sensors/Read Lego Touch Sensor(Count).vi"/>
+				<Item Name="Read Lego Touch Sensor(Pressed).vi" Type="VI" URL="/&lt;userlib&gt;/KNR OS 3.0 LabVIEW Toolkit/LEGO-specific Sensors/Complete Analog Sensors/Read Lego Touch Sensor(Pressed).vi"/>
+				<Item Name="Read Lego Touch Sensor(Released).vi" Type="VI" URL="/&lt;userlib&gt;/KNR OS 3.0 LabVIEW Toolkit/LEGO-specific Sensors/Complete Analog Sensors/Read Lego Touch Sensor(Released).vi"/>
+				<Item Name="Read Lego Ultrasonar Sensor.vi" Type="VI" URL="/&lt;userlib&gt;/KNR OS 3.0 LabVIEW Toolkit/LEGO-specific Sensors/Complete Digital Sensors/Read Lego Ultrasonar Sensor.vi"/>
+				<Item Name="Read Temperature.vi" Type="VI" URL="/&lt;userlib&gt;/KNR OS 3.0 LabVIEW Toolkit/LEGO-specific Sensors/Complete Digital Sensors/Read Temperature.vi"/>
 				<Item Name="Resource.ctl" Type="VI" URL="/&lt;userlib&gt;/KNR OS 3.0 LabVIEW Toolkit/Type Definition/Resource.ctl"/>
 				<Item Name="Servo Name to Address.vi" Type="VI" URL="/&lt;userlib&gt;/KNR OS 3.0 LabVIEW Toolkit/support SubVI/_Utilities/Servo Name to Address.vi"/>
 				<Item Name="Set 5V Power.vi" Type="VI" URL="/&lt;userlib&gt;/KNR OS 3.0 LabVIEW Toolkit/General/Set 5V Power.vi"/>
+				<Item Name="Temperature Sub.Raw to Temp.vi" Type="VI" URL="/&lt;userlib&gt;/KNR OS 3.0 LabVIEW Toolkit/support SubVI/Temperature Sub.Raw to Temp.vi"/>
+				<Item Name="Temperature Sub.RoundToTenth.vi" Type="VI" URL="/&lt;userlib&gt;/KNR OS 3.0 LabVIEW Toolkit/support SubVI/Temperature Sub.RoundToTenth.vi"/>
 				<Item Name="TETRIX Check Servos (single).vi" Type="VI" URL="/&lt;userlib&gt;/KNR OS 3.0 LabVIEW Toolkit/TETRIX Motor Controller/TETRIX Check Servos (single).vi"/>
 				<Item Name="TETRIX error handler.vi" Type="VI" URL="/&lt;userlib&gt;/KNR OS 3.0 LabVIEW Toolkit/support SubVI/_LowLevel/TETRIX error handler.vi"/>
 				<Item Name="TETRIX I2C Write Read with address_KNR.vi" Type="VI" URL="/&lt;userlib&gt;/KNR OS 3.0 LabVIEW Toolkit/support SubVI/_LowLevel/TETRIX I2C Write Read with address_KNR.vi"/>
@@ -1330,6 +1340,7 @@ AddOutputFilter chunkFilter
 				<Item Name="TETRIX Move DC Motors (single).vi" Type="VI" URL="/&lt;userlib&gt;/KNR OS 3.0 LabVIEW Toolkit/TETRIX Motor Controller/TETRIX Move DC Motors (single).vi"/>
 				<Item Name="TETRIX Move Servos (single).vi" Type="VI" URL="/&lt;userlib&gt;/KNR OS 3.0 LabVIEW Toolkit/TETRIX Motor Controller/TETRIX Move Servos (single).vi"/>
 				<Item Name="TETRIX Reset Encoders (single).vi" Type="VI" URL="/&lt;userlib&gt;/KNR OS 3.0 LabVIEW Toolkit/TETRIX Motor Controller/TETRIX Reset Encoders (single).vi"/>
+				<Item Name="Touch Sensor Counter.vi" Type="VI" URL="/&lt;userlib&gt;/KNR OS 3.0 LabVIEW Toolkit/support SubVI/Touch Sensor Counter.vi"/>
 			</Item>
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="BuildHelpPath.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/BuildHelpPath.vi"/>
@@ -1398,7 +1409,22 @@ AddOutputFilter chunkFilter
 				<Item Name="Vision Info Type2.ctl" Type="VI" URL="/&lt;vilib&gt;/vision/Image Controls.llb/Vision Info Type2.ctl"/>
 				<Item Name="whitespace.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/whitespace.ctl"/>
 			</Item>
+			<Item Name="Blocks.vi" Type="VI" URL="../../WRO2018/學長姐世界賽WorldCup/WRO2017_Vision/Stacking/Blocks.vi"/>
+			<Item Name="camera.vi" Type="VI" URL="../../WRO2018/學長姐世界賽WorldCup/WRO2017_Vision/camera.vi"/>
+			<Item Name="catch2.vi" Type="VI" URL="../../WRO2018/學長姐世界賽WorldCup/WRO2017_Vision/catch2.vi"/>
+			<Item Name="catch3.vi" Type="VI" URL="../../WRO2018/學長姐世界賽WorldCup/catch3.vi"/>
+			<Item Name="Control_3Wheel.vi" Type="VI" URL="../../WRO2018/學長姐世界賽WorldCup/XYZ_Table/Control_3Wheel.vi"/>
+			<Item Name="DC(P+V)_3Wheel.vi" Type="VI" URL="../../WRO2018/學長姐世界賽WorldCup/XYZ_Table/DC(P+V)_3Wheel.vi"/>
+			<Item Name="Define_KNRm.vi" Type="VI" URL="../../WRO2018/學長姐世界賽WorldCup/RobotMove/Define_KNRm.vi"/>
+			<Item Name="Definition_3Wheel.vi" Type="VI" URL="../../WRO2018/學長姐世界賽WorldCup/XYZ_Table/Definition_3Wheel.vi"/>
 			<Item Name="Fifo_DMA_Config.ctl" Type="VI" URL="/&lt;vilib&gt;/rvi/FIFO/Fifo_Types/Fifo_DMA_Config.ctl"/>
+			<Item Name="Global.vi" Type="VI" URL="../../WRO2018/學長姐世界賽WorldCup/XYZ_Table/Global.vi"/>
+			<Item Name="Global_KNRm.vi" Type="VI" URL="../../WRO2018/學長姐世界賽WorldCup/RobotMove/Global_KNRm.vi"/>
+			<Item Name="hole.vi" Type="VI" URL="../../WRO2018/學長姐世界賽WorldCup/WRO2017_Vision/hole.vi"/>
+			<Item Name="Interpolation_3Wheel.vi" Type="VI" URL="../../WRO2018/學長姐世界賽WorldCup/XYZ_Table/Interpolation_3Wheel.vi"/>
+			<Item Name="Move_3Wheel.vi" Type="VI" URL="../../WRO2018/學長姐世界賽WorldCup/XYZ_Table/Move_3Wheel.vi"/>
+			<Item Name="new_Stacking function.vi" Type="VI" URL="../../WRO2018/學長姐世界賽WorldCup/WRO2017_Vision/Stacking/new_Stacking function.vi"/>
+			<Item Name="new_XY_deviation_angle(double).vi" Type="VI" URL="../../WRO2018/學長姐世界賽WorldCup/WRO2017_Vision/new_XY_deviation_angle(double).vi"/>
 			<Item Name="NiFpga.dll" Type="Document" URL="NiFpga.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
@@ -1444,8 +1470,19 @@ AddOutputFilter chunkFilter
 			<Item Name="nivissvc.dll" Type="Document" URL="nivissvc.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
+			<Item Name="photo Conversion.vi" Type="VI" URL="../../WRO2018/學長姐世界賽WorldCup/photo Conversion.vi"/>
+			<Item Name="RC control.vi" Type="VI" URL="../../WRO2018/學長姐世界賽WorldCup/RC control.vi"/>
+			<Item Name="shapeID.vi" Type="VI" URL="../../WRO2018/學長姐世界賽WorldCup/WRO2017_Vision/shapeID.vi"/>
+			<Item Name="Stacking algorithm.vi" Type="VI" URL="../../WRO2018/學長姐世界賽WorldCup/WRO2017_Vision/Stacking/Stacking algorithm.vi"/>
 			<Item Name="Stacking Increase the function.vi" Type="VI" URL="../Vision/Stacking Increase the function.vi"/>
+			<Item Name="Stacking Increase the function.vi" Type="VI" URL="../../WRO2018/學長姐世界賽WorldCup/WRO2017_Vision/Stacking/Stacking Increase the function.vi"/>
+			<Item Name="Start into stacking.vi" Type="VI" URL="../../WRO2018/學長姐世界賽WorldCup/WRO2017_Vision/Stacking/Start into stacking.vi"/>
 			<Item Name="Start Stacking.vi" Type="VI" URL="../Vision/Start Stacking.vi"/>
+			<Item Name="Start Stacking.vi" Type="VI" URL="../../WRO2018/學長姐世界賽WorldCup/WRO2017_Vision/Stacking/Start Stacking.vi"/>
+			<Item Name="ter rc.vi" Type="VI" URL="../../WRO2018/學長姐世界賽WorldCup/ter rc.vi"/>
+			<Item Name="unite up.vi" Type="VI" URL="../../WRO2018/學長姐世界賽WorldCup/unite up.vi"/>
+			<Item Name="vision.vi" Type="VI" URL="../../WRO2018/學長姐世界賽WorldCup/WRO2017_Vision/vision.vi"/>
+			<Item Name="XDNodeRunTimeDep.lvlib" Type="Library" URL="/&lt;vilib&gt;/Platform/TimedLoop/XDataNode/XDNodeRunTimeDep.lvlib"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
