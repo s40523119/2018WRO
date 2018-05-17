@@ -2,5 +2,5 @@
 KNRm = "172.22.11.2"
 
 [My Computer]
-My Computer = "192.168.50.187"
+My Computer = "127.0.0.1"
 
