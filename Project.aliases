@@ -2,5 +2,13 @@
 KNRm = "172.22.11.2"
 
 [My Computer]
+<<<<<<< HEAD
 My Computer = "127.0.0.1"
+=======
+<<<<<<< HEAD
+My Computer = "192.168.50.39"
+=======
+My Computer = "192.168.50.187"
+>>>>>>> b939e92bf1c2acadc29a1a279626172dd2687d3a
+>>>>>>> b737e3c6c2589fcd57b468196626cb9000dbef81
 
