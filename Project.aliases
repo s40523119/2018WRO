@@ -2,9 +2,5 @@
 KNRm = "172.22.11.2"
 
 [My Computer]
-<<<<<<< HEAD
-My Computer = "192.168.50.39"
-=======
-My Computer = "192.168.50.187"
->>>>>>> b939e92bf1c2acadc29a1a279626172dd2687d3a
+My Computer = "172.22.11.1"
 
