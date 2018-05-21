@@ -1401,7 +1401,6 @@ AddOutputFilter chunkFilter
 			</Item>
 			<Item Name="Blocks.vi" Type="VI" URL="../../WRO2018/學長姐世界賽WorldCup/WRO2017_Vision/Stacking/Blocks.vi"/>
 			<Item Name="Fifo_DMA_Config.ctl" Type="VI" URL="/&lt;vilib&gt;/rvi/FIFO/Fifo_Types/Fifo_DMA_Config.ctl"/>
-			<Item Name="Global_KNRm.vi" Type="VI" URL="../../WRO2018/學長姐世界賽WorldCup/RobotMove/Global_KNRm.vi"/>
 			<Item Name="new_Stacking function.vi" Type="VI" URL="../../WRO2018/學長姐世界賽WorldCup/WRO2017_Vision/Stacking/new_Stacking function.vi"/>
 			<Item Name="NiFpga.dll" Type="Document" URL="NiFpga.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
@@ -1448,6 +1447,9 @@ AddOutputFilter chunkFilter
 			<Item Name="nivissvc.dll" Type="Document" URL="nivissvc.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
+			<Item Name="ter rc.vi" Type="VI" URL="../RobotMove/ter rc.vi"/>
+			<Item Name="unite up.vi" Type="VI" URL="../RobotMove/unite up.vi"/>
+			<Item Name="vision.vi" Type="VI" URL="../RobotMove/WRO2017_Vision/vision.vi"/>
 			<Item Name="XDNodeRunTimeDep.lvlib" Type="Library" URL="/&lt;vilib&gt;/Platform/TimedLoop/XDataNode/XDNodeRunTimeDep.lvlib"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
